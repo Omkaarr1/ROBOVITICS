@@ -1,0 +1,320 @@
+*::before {
+    scroll-behavior: smooth;
+    box-sizing: content-box;
+}
+
+
+
+
+body,
+html {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+body,
+html {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.33s ease all;
+    padding: 0%;
+}
+main {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px 0 #000;
+    transition: 0.9s;
+}
+
+.nav-open main {
+    transform: scale(0.8);
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    display: table;
+    background: url('https://wallpaper.dog/large/10982972.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.33s ease all;
+    border-radius: 2px;
+}
+
+h1 {
+    text-align: center;
+    color: inherit;
+    font-size: 36px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p > a:hover {
+    color: #d9d9d9;
+    text-decoration: underline;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/*Scroll bar*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(4, 199, 233, 0.763);
+    /*change this for the color of the scroll bar*/
+    border-radius: 1px;
+}
+
+hr {
+    border: 2px solid rgb(42, 7, 241);
+    border-radius: 0.08px;
+    width: 70%;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_card {
+    color: rgb(12, 12, 12);
+    margin: 30px;
+    display: flex;
+    max-width: 90%;
+    background: rgba(12, 241, 233, 0.8);
+    border-radius: 15px;
+    box-sizing: content-box;
+    align-items: center;
+}
+
+.main_card:hover {
+    transform: scale(0.98);
+    transition: 0.3s ease all;
+}
+
+.card_datails {
+    padding: 30px;
+    margin-top: -25px;
+}
+
+.card_datails h1 {
+    font-size: 35px;
+}
+
+.card_right img {
+    height: 390px;
+    border-radius: 15px;
+}
+
+.card_right {
+    border-radius: 15px;
+}
+
+.disc {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 800px) {
+    .main_card {
+        flex-direction: column;
+    }
+
+    .card_right img {
+        height: 250px;
+        border-radius: 15px;
+    }
+
+    .wrapper {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.pro {
+    padding: 3%;
+}
+
+
+
+#i1,
+#i2,
+#i3,
+#i4,
+#i5,
+#i6,
+#i7,
+#i8,
+#i9,
+#i10 {
+    display: none;
+}
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    width: 800px;
+    height: 60%;
+    background-color: rgb(169, 169, 169);
+    /* border: solid 10px #616161; */
+    border-radius: 30px;
+    text-align: center;
+}
+
+.container .slide_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container .slide_img img {
+    width: inherit;
+    height: inherit;
+}
+
+.prev,
+.next {
+    width: 5%;
+    position: absolute;
+    top: 87%;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(244, 244, 244, 0.637);
+    z-index: 99;
+    transition: 0.45s;
+    cursor: pointer;
+    text-align: left;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+label span {
+    position: absolute;
+    font-size: 100pt;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev:hover,
+.next:hover {
+    transition: 0.3s;
+    color: #080cea;
+}
+
+.content-pro {
+    font-size: 170%;
+    line-height: 100%;
+    text-align: justify;
+}
+
+.container #nav_slide {
+    width: 100%;
+    bottom: 12%;
+    height: 11px;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    cursor: default;
+}
+
+hr {
+    border: 2px solid rgb(3, 116, 245);
+    border-radius: 0.08px;
+    width: 70%;
+}
+
+#nav_slide .dots {
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+}
+
+#nav_slide .dots:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.25s;
+}
+
+.slide_img {
+    z-index: -1;
+    color: rgba(255, 255, 255, 0);
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four,
+#i5:checked ~ #five,
+#i6:checked ~ #six,
+#i7:checked ~ #seven,
+#i8:checked ~ #eight,
+#i9:checked ~ #nine,
+#i10:checked ~ #ten {
+    z-index: 2;
+    animation: scroll 1ms ease-in-out;
+    color: black;
+}
+
+#i1:checked ~ #nav_slide #dot1,
+#i2:checked ~ #nav_slide #dot2,
+#i3:checked ~ #nav_slide #dot3,
+#i4:checked ~ #nav_slide #dot4,
+#i5:checked ~ #nav_slide #dot5,
+#i6:checked ~ #nav_slide #dot6,
+#i7:checked ~ #nav_slide #dot7,
+#i8:checked ~ #nav_slide #dot8,
+#i9:checked ~ #nav_slide #dot9,
+#i10:checked ~ #nav_slide #dot10 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
